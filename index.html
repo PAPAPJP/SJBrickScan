@@ -340,7 +340,7 @@ $('btnManual').addEventListener('click', () => {
 });
 
 function buildBricklinkUrl(type, id){
-  return `https://www.bricklink.com/v2/catalog/catalogitem.page?${type}=${encodeURIComponent(id)}`;
+  return `https://www.bricklink.com/v2/catalog/catalogitem.page?${type}=${encodeURIComponent(id)}#T=P`;
 }
 
 function buildSearchUrl(query){
@@ -481,7 +481,7 @@ function renderResults(data){
           <p class="card-name">${escapeHtml(item.name)}</p>
           <p class="card-meta">${escapeHtml(item.type || 'type inconnu')} · réf. ${escapeHtml(String(item.id))}${pct !== null ? ` · confiance ${pct}%` : ''}</p>
           ${studsHtml}
-          <a class="card-link" href="${url}" target="_blank">Voir sur BrickLink →</a>
+          <a class="card-link" href="${url}" target="_blank">Voir les prix sur BrickLink →</a>
           &nbsp;&nbsp;
           <a class="card-link" href="${searchUrl}" target="_blank" style="color:var(--ink-soft);border-color:var(--ink-soft);">Chercher plutôt</a>
         </div>
